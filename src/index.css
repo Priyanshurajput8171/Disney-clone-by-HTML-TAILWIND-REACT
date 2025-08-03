@@ -1,0 +1,16 @@
+@import "tailwindcss";
+@import 'tailwind-scrollbar-hide/v4';
+body {
+  margin: 0;
+  background-color: #1A1D29;
+  /* Remove display:flex unless you're controlling layout with it */
+}
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+.your-container::-webkit-scrollbar {
+  display: none;
+}
