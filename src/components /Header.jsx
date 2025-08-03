@@ -2,7 +2,6 @@ import logo from './../assets/logo3.png'
 import {HiHome,HiStar,HiMiniMagnifyingGlass, HiPlayCircle ,HiTv  } from "react-icons/hi2";
 import { HiPlus, HiDotsVertical } from "react-icons/hi";
 import HeaderItem from './HeaderItem';
-import './Header.css'
 import { useState } from 'react';
 
 

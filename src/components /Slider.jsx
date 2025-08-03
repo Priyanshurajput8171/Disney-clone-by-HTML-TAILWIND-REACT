@@ -12,8 +12,9 @@ function Slider() {
   }, []);
 
   const getTrendingMovies = () => {
-    GlobalApi.getTrendingVideos().then((resp) => {
+    GlobalApi.getTrendingVideos().then(resp => {
       setMovieList(resp.data.results);
+      console.log(IMAGE_BASE_URL+resp.data.results.backdrop_path)
     });
   };
   const sliderRight = (element) => {
@@ -22,6 +23,7 @@ function Slider() {
   const sliderLeft = (element) => {
     element.scrollLeft -= screenWidth-110;
   };
+
 
   return (
     <div>
@@ -40,7 +42,7 @@ function Slider() {
         {movieList.map((item, index) => (
           <img
             src={IMAGE_BASE_URL+item.backdrop_path}
-            className="min-w-[100%] md:h-[610px] object-cover  mr-5 rounded-md hover:border-[4px] border-gray-100 transition-all duration-100"
+            className="min-w-[100%] md:h-[610px] object-cover  mr-5 rounded-mg hover:border-[4px] border-gray-100 transition-all duration-100"
           />
         ))}
       </div>

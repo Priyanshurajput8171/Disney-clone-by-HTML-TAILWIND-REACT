@@ -43,14 +43,16 @@ function Provider() {
     <div className="flex gap-2 md:gap-7 p-2 px-5 md:px-16">
       {dataIV.map((item , index) => (
         <div className="border-[4px] border-gray-600 rounded-[20px] transition-all duration-300 ease-in-out cursor-pointer hover:scale-110 relative shadow-xl shadow-gray-800">
-          <img key={index} src={item.image} className="w-full z-[1]" />
-           <video
+             <video
             src={item.video}
             autoPlay
             loop
             playsInline
             className="absolute top-0 z-0 rounded-[16px] opacity-0 hover:opacity-50 w-[100%]"
           />
+         
+          <img key={index} src={item.image} className="w-full z-[1]" />
+         
         </div>
       ))}
     </div>
